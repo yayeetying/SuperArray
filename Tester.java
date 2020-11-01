@@ -1,7 +1,9 @@
 public class Tester {
+
   public static void main(String[] args) {
     SuperArray fruits = new SuperArray();
     SuperArray numbers = new SuperArray();
+    SuperArray words = new SuperArray();
 
     System.out.println(fruits.size());
     System.out.println(fruits.add("orange"));
@@ -22,6 +24,18 @@ public class Tester {
     for (int i = 0; i < numbers.size(); i++) {
       System.out.println(numbers.get(i));
     }
+    System.out.println();
+
+    words.add("kani");
+    words.add("uni");
+    words.add("ebi");
+    words.add(""); //you can add an empty String
+    words.add(null); //you can add a null?!
+    System.out.println(words.set(0, "kaniSalad"));
+    for (int i = 0; i < words.size(); i++) {
+      System.out.println(words.get(i));
+    }
+    System.out.println(words.size());
 
   }
 }
