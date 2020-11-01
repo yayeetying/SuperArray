@@ -5,7 +5,6 @@ public class SuperArray {
 
   public SuperArray() {
     data = new String[10];
-    //right now, data is == null;
     size = 0;
   }
 
@@ -22,8 +21,15 @@ public class SuperArray {
     return false;
   }
 
-  // public String get(int index) {
-  //   return data[index];
-  // }
+  public String get(int index) { //assume index is 0 to size-1
+    return data[index];
+  }
+
+  //not add new values, only to replace old ones
+  public String set(int index, String element) { //assume index is 0 to size-1
+    String replaced = data[index];
+    data[index] = element;
+    return replaced;
+  }
 
 }
