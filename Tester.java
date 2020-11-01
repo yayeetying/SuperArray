@@ -14,6 +14,14 @@ public class Tester {
     System.out.println();
     System.out.println(fruits.set(0, "apple"));
     System.out.println(fruits.get(0));
+    System.out.println();
+
+    for (int i = 0; i < 15; i++) {
+      numbers.add(Integer.toString(i));
+    }
+    for (int i = 0; i < numbers.size(); i++) {
+      System.out.println(numbers.get(i));
+    }
 
   }
 }
