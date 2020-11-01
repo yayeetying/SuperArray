@@ -32,4 +32,12 @@ public class SuperArray {
     return replaced;
   }
 
+  private void resize() {
+    String[] newData = new String[data.length + 10];
+    for (int i = 0; i < data.length; i++) {
+      newData[i] = data[i];
+    }
+    data = newData;
+  }
+
 }
