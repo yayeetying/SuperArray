@@ -18,7 +18,7 @@ public class Tester {
     System.out.println(fruits.get(0));
     System.out.println();
 
-    for (int i = 0; i < 15; i++) {
+    for (int i = 0; i <= 15; i++) {
       numbers.add(Integer.toString(i));
     }
     for (int i = 0; i < numbers.size(); i++) {
@@ -32,6 +32,7 @@ public class Tester {
     words.add(""); //you can add an empty String
     words.add(null); //you can add a null?!
     System.out.println(words.set(0, "kaniSalad"));
+    words.add("peanuts");
     for (int i = 0; i < words.size(); i++) {
       System.out.println(words.get(i));
     }
@@ -41,5 +42,8 @@ public class Tester {
     System.out.println(words.isEmpty());
     words.clear();
     System.out.println(words.isEmpty());
+    System.out.println(fruits.toString());
+    System.out.println(fruits.size());
+    System.out.println(numbers.toString());
   }
 }

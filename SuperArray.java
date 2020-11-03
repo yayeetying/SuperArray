@@ -13,7 +13,7 @@ public class SuperArray {
   }
 
   public boolean add(String element) {
-    if (size >= data.length) resize();
+    if (size == data.length) resize();
     data[size] = element;
     size++;
     return true;
@@ -43,8 +43,17 @@ public class SuperArray {
   }
 
   public void clear() {
-    data = new String[10];
+    data = new String[10]; //maybe don't reset the capacity of array
     size = 0;
+  }
+
+  public String toString() { //size is the index value still available
+    String str = "[";
+    for (int i = 0; i < size; i++) {
+      if (i == size-1) str += data[i] + "]";
+      else {str += data[i] + ", ";}
+    }
+    return str;
   }
 
 }
