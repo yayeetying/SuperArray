@@ -56,6 +56,14 @@ public class Tester {
     System.out.println(numbers.contains(null));
     System.out.println(numbers.contains(""));
     System.out.println();
+    System.out.println();
     //numbers = 1-100; fruits = apple x2; words = cleared
+
+    SuperArray numbers2 = new SuperArray(120);
+    for (int i = 0; i <= 100; i++) {
+      numbers2.add(Integer.toString(i));
+    }
+    System.out.println(numbers2.toString());
+
   }
 }
