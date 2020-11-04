@@ -40,10 +40,22 @@ public class Tester {
     System.out.println();
 
     System.out.println(words.isEmpty());
+    System.out.println(words.contains(""));
+    System.out.println(words.contains(null));
+    System.out.println(words.contains("ebi"));
+    System.out.println(words.contains("oogabooga"));
     words.clear();
     System.out.println(words.isEmpty());
     System.out.println(fruits.toString());
     System.out.println(fruits.size());
     System.out.println(numbers.toString());
+    System.out.println();
+
+    System.out.println(numbers.contains("asar"));
+    System.out.println(numbers.contains("1"));
+    System.out.println(numbers.contains(null));
+    System.out.println(numbers.contains(""));
+    System.out.println();
+    //numbers = 1-15; fruits = apple x2; words = cleared
   }
 }

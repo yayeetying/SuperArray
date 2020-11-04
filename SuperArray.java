@@ -56,4 +56,16 @@ public class SuperArray {
     return str;
   }
 
+  public boolean contains(String s) {
+    for (int i = 0; i < size; i++) {
+      if (s == null) { //doesn't need to, but accounts for if s is null
+        if (data[i] == s) return true;
+      }
+      else {
+        if (s.equals(data[i])) return true;
+      }
+    }
+    return false;
+  }
+
 }
