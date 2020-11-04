@@ -90,5 +90,11 @@ public class Tester {
     System.out.println(numbers2.indexOf("12"));
     System.out.println(numbers2.indexOf("cat"));
     System.out.println(numbers2.indexOf(null));
+
+    System.out.println();
+    String[] fruits2 = fruits.toArray();
+    System.out.println(fruits2[0]);
+    System.out.println(fruits2[1]);
+    //System.out.println(fruits2[2]); should fail, bc index out of bounds
   }
 }
