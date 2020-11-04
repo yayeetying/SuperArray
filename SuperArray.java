@@ -96,4 +96,18 @@ public class SuperArray {
     return false;
   }
 
+  public int indexOf(String s) {
+    if (contains(s)) {
+      for (int i = 0; i < size; i++) {
+        if (s == null) { //accounts for if s is null
+          if (data[i] == s) return i;
+        }
+        else {
+          if (s.equals(data[i])) return i;
+        }
+      }
+    }
+    return -1;
+  }
+
 }

@@ -70,7 +70,7 @@ public class Tester {
     System.out.println(numbers2.toString());
     System.out.println(numbers2.size()); //size should = 102
     System.out.println();
-    numbers2.add("cats");
+    numbers2.add("cat");
     numbers2.add(103, "neko");
     System.out.println(numbers2.toString());
     System.out.println(numbers2.size()); //size should = 104
@@ -82,5 +82,13 @@ public class Tester {
     System.out.println(numbers2.remove(115)); //size <= index <= capacity; returns null
     System.out.println(numbers2.toString());
     System.out.println(numbers2.size()); //size should = 102
+    System.out.println();
+
+    numbers2.add(37,"cat");
+    numbers2.add(83,null);
+    System.out.println(numbers2.indexOf("peanuts"));
+    System.out.println(numbers2.indexOf("12"));
+    System.out.println(numbers2.indexOf("cat"));
+    System.out.println(numbers2.indexOf(null));
   }
 }
