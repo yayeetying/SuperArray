@@ -63,7 +63,17 @@ public class Tester {
     for (int i = 0; i <= 100; i++) {
       numbers2.add(Integer.toString(i));
     }
+    System.out.println(numbers2.size()); //numbs 0 - 100, so size should = 101
     System.out.println(numbers2.toString());
+    numbers2.add(50, "cats");
+    System.out.println();
+    System.out.println(numbers2.toString());
+    System.out.println(numbers2.size()); //size should = 102
+    System.out.println();
+    numbers2.add("cats");
+    numbers2.add(103, "neko");
+    System.out.println(numbers2.toString());
+    System.out.println(numbers2.size()); //size should = 104
 
   }
 }

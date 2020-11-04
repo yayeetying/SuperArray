@@ -24,6 +24,17 @@ public class SuperArray {
     return true;
   }
 
+  public void add(int index, String element) {
+    if (size == data.length) resize();
+    if (data[index] != null) { //spot at index is occupied
+      for (int i = size; i > index; i -= 1) {
+        data[i] = data[i-1];
+      }
+    }
+    data[index] = element;
+    size++;
+  }
+
   public String get(int index) { //assume index is 0 to size-1
     return data[index];
   }
