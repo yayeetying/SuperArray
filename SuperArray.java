@@ -35,6 +35,17 @@ public class SuperArray {
     size++;
   }
 
+  public String remove(int index) {
+    String removed = data[index];
+    if (removed != null) { //does removed have an element?
+      for (int i = index; i < size; i++) {
+        data[i] = data[i+1];
+      }
+      size -= 1;
+    }
+    return removed;
+  }
+
   public String get(int index) { //assume index is 0 to size-1
     return data[index];
   }

@@ -74,6 +74,13 @@ public class Tester {
     numbers2.add(103, "neko");
     System.out.println(numbers2.toString());
     System.out.println(numbers2.size()); //size should = 104
-
+    System.out.println(numbers2.remove(50)); //cats
+    System.out.println(numbers2.remove(102)); //neko
+    System.out.println(numbers2.toString());
+    System.out.println(numbers2.size()); //size should = 102
+    System.out.println(numbers2.remove(102));
+    System.out.println(numbers2.remove(115)); //size <= index <= capacity; returns null
+    System.out.println(numbers2.toString());
+    System.out.println(numbers2.size()); //size should = 102
   }
 }
