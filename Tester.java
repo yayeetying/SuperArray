@@ -18,7 +18,7 @@ public class Tester {
     System.out.println(fruits.get(0));
     System.out.println();
 
-    for (int i = 0; i <= 15; i++) {
+    for (int i = 0; i <= 100; i++) {
       numbers.add(Integer.toString(i));
     }
     for (int i = 0; i < numbers.size(); i++) {
@@ -56,6 +56,6 @@ public class Tester {
     System.out.println(numbers.contains(null));
     System.out.println(numbers.contains(""));
     System.out.println();
-    //numbers = 1-15; fruits = apple x2; words = cleared
+    //numbers = 1-100; fruits = apple x2; words = cleared
   }
 }
