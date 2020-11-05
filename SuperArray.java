@@ -78,9 +78,10 @@ public class SuperArray {
   public String toString() { //size is the index value still available
     String str = "[";
     for (int i = 0; i < size; i++) {
-      if (i == size-1) str += data[i] + "]";
+      if (i == size-1) str += data[i];
       else {str += data[i] + ", ";}
     }
+    str += "]";
     return str;
   }
 
