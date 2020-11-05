@@ -96,5 +96,15 @@ public class Tester {
     System.out.println(fruits2[0]);
     System.out.println(fruits2[1]);
     //System.out.println(fruits2[2]); should fail, bc index out of bounds
+
+    System.out.println();
+    SuperArray work = new SuperArray();
+    for (int i = 0; i < 4; i++) {
+      for (int j = 0; j <= 4; j++) {
+        work.add(Integer.toString(j));
+      }
+    }
+    System.out.println(work.remove(19));
+
   }
 }
