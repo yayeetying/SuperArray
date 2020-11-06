@@ -106,7 +106,21 @@ public class SuperArray {
         }
       }
     }
-    return -1;
+    return -1; //s ain't there
+  }
+
+  public int lastIndexOf(String value) {
+    if (contains(value)) {
+      for (int i = size-1; i >= 0; i--) {
+        if (value == null) { //accounts for if s is null
+          if (data[i] == value) return i;
+        }
+        else {
+          if (value.equals(data[i])) return i;
+        }
+      }
+    }
+    return -1; //s ain't there
   }
 
   public String[] toArray() {

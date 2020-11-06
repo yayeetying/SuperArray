@@ -105,6 +105,24 @@ public class Tester {
       }
     }
     System.out.println(work.remove(19));
+    System.out.println(work);
+    System.out.println(work.lastIndexOf("3"));
+    System.out.println(work.lastIndexOf("2"));
+    System.out.println(work.lastIndexOf("1"));
+    System.out.println(work.lastIndexOf("0"));
+    System.out.println(work.lastIndexOf("cats"));
+    System.out.println(work.indexOf("4"));
+    System.out.println(work.indexOf("3"));
+    System.out.println(work.indexOf("2"));
+    System.out.println(work.indexOf("1"));
+    System.out.println(work.indexOf("0"));
+    System.out.println();
+    System.out.println(fruits.indexOf("apple"));
+    System.out.println(fruits.lastIndexOf("apple"));
+    System.out.println(numbers.lastIndexOf("1"));
+    System.out.println(numbers.indexOf("1"));
+    System.out.println(numbers.lastIndexOf("150"));
+    System.out.println(numbers.indexOf("150"));
 
   }
 }
