@@ -18,5 +18,41 @@ public class Demo {
     System.out.println(words);
     removeDuplicates(words);
     System.out.println(words);
+
+    SuperArray rawr = new SuperArray();
+    System.out.println(rawr);
+    removeDuplicates(rawr);
+    System.out.println(rawr);
+
+    SuperArray ducky = new SuperArray();
+    ducky.add("quack");   ducky.add("quackquack");   ducky.add("Quack");
+    ducky.add("QuackQuack");   ducky.add("REEEEEEEEEEE!");
+    System.out.println(ducky);
+    removeDuplicates(ducky);
+    System.out.println(ducky);
+
+    SuperArray usagi = new SuperArray();
+    usagi.add("pyun");   usagi.add("ribbit");   usagi.add("aww");
+    usagi.add("hophop");   usagi.add("pyun");
+    System.out.println(usagi);
+    removeDuplicates(usagi);
+    System.out.println(usagi);
+
+    SuperArray coffee = new SuperArray();
+    coffee.add("ccc");   coffee.add("coffee");   coffee.add("coffee");
+    coffee.add("coffee");   coffee.add("coffee");   coffee.add("kafei");
+    coffee.add("kopi");   coffee.add("kafei");   coffee.add("kapei");
+    System.out.println(coffee);
+    removeDuplicates(coffee);
+    System.out.println(coffee);
+
+    SuperArray REE = new SuperArray();
+    for (int i = 0; i < 10; i++) {
+      REE.add("REE");
+    }
+    System.out.println(REE);
+    removeDuplicates(REE);
+    System.out.println(REE);
+
   }
 }
