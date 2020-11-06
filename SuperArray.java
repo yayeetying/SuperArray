@@ -96,28 +96,24 @@ public class SuperArray {
   }
 
   public int indexOf(String s) {
-    if (contains(s)) {
-      for (int i = 0; i < size; i++) {
-        if (s == null) { //accounts for if s is null
-          if (data[i] == s) return i;
-        }
-        else {
-          if (s.equals(data[i])) return i;
-        }
+    for (int i = 0; i < size; i++) {
+      if (s == null) { //accounts for if s is null
+        if (data[i] == s) return i;
+      }
+      else {
+        if (s.equals(data[i])) return i;
       }
     }
     return -1; //s ain't there
   }
 
   public int lastIndexOf(String value) {
-    if (contains(value)) {
-      for (int i = size-1; i >= 0; i--) {
-        if (value == null) { //accounts for if s is null
-          if (data[i] == value) return i;
-        }
-        else {
-          if (value.equals(data[i])) return i;
-        }
+    for (int i = size-1; i >= 0; i--) {
+      if (value == null) { //accounts for if s is null
+        if (data[i] == value) return i;
+      }
+      else {
+        if (value.equals(data[i])) return i;
       }
     }
     return -1; //s ain't there
