@@ -148,6 +148,15 @@ public class Tester {
     SuperArray i = new SuperArray(1);
     i.add("8");   i.add("1");
     System.out.println(u.equals(i));
+    System.out.println();
+
+    SuperArray wahh = new SuperArray(0);
+    try {
+      SuperArray qahh = new SuperArray(-10);
+    }
+    catch (IllegalArgumentException error) {
+      System.out.println("IllegalArgumentException error!"); 
+    }
 
   }
 }
