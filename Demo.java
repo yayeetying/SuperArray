@@ -19,6 +19,25 @@ public class Demo {
     return bothHave;
   }
 
+  public static SuperArray zip(SuperArray a, SuperArray b) {
+    SuperArray zipped = new SuperArray();
+    int smaller = b.size(); //a is bigger; b is smaller
+    int bigger = a.size();
+    if (b.size() > a.size()) { //b is bigger, a is smaller
+      smaller = a.size();
+      bigger = b.size();
+    }
+    for (int i = 0; i < smaller; i++) {
+      zipped.add(a.get(i));
+      zipped.add(b.get(i));
+    }
+    for (int i = smaller; i < bigger; i++) {
+      if (b.size() > a.size()) zipped.add(b.get(i));
+      else {zipped.add(a.get(i));}
+    }
+    return zipped;
+  }
+
   public static void main(String[]args){
     SuperArray words = new SuperArray();
     //grouped to save vertical space
@@ -46,16 +65,16 @@ public class Demo {
     usagi.add("pyun");   usagi.add("ribbit");   usagi.add("aww");
     usagi.add("hophop");   usagi.add("pyun");
     System.out.println(usagi);
-    removeDuplicates(usagi);
-    System.out.println(usagi);
+    // removeDuplicates(usagi);
+    // System.out.println(usagi);
 
     SuperArray coffee = new SuperArray();
     coffee.add("ccc");   coffee.add("coffee");   coffee.add("coffee");
     coffee.add("coffee");   coffee.add("coffee");   coffee.add("kafei");
     coffee.add("kopi");   coffee.add("kafei");   coffee.add("kapei");
     System.out.println(coffee);
-    removeDuplicates(coffee);
-    System.out.println(coffee);
+    // removeDuplicates(coffee);
+    // System.out.println(coffee);
 
     SuperArray REE = new SuperArray();
     for (int i = 0; i < 10; i++) {
@@ -115,6 +134,28 @@ public class Demo {
     SuperArray yoyo = new SuperArray();
     yoyo.add("6");   yoyo.add("8");   yoyo.add("4");   yoyo.add("2");   yoyo.add("5");
     System.out.println(findOverlap(bobo, yoyo));
+
+    SuperArray zip1 = new SuperArray();
+    zip1.add("a");   zip1.add("b");   zip1.add("c");
+    zip1.add("d");   zip1.add("e");   zip1.add("f");
+    SuperArray zip2 = new SuperArray();
+    zip2.add("0");   zip2.add("1");   zip2.add("2");   zip2.add("3");
+    System.out.println(zip(zip1, zip2));
+
+    SuperArray zip3 = new SuperArray();
+    zip3.add("a");   zip3.add("b");   zip3.add("c");
+    SuperArray zip4 = new SuperArray();
+    zip4.add("0");   zip4.add("1");   zip4.add("2");   zip4.add("3");
+    zip4.add("4");
+    System.out.println(zip(zip3, zip4));
+
+    System.out.println(zip(usagi, ducky)); //same length
+    System.out.println(zip(words, secret)); //secret is empty
+    System.out.println(zip(secret, words));
+    System.out.println(zip(coffee, A));
+    System.out.println(zip(A, coffee));
+    System.out.println(zip(santa, secret)); //both are empty
+    System.out.println(zip(secret, santa));
 
   }
 }
