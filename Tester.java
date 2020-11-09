@@ -123,6 +123,31 @@ public class Tester {
     System.out.println(numbers.indexOf("1"));
     System.out.println(numbers.lastIndexOf("150"));
     System.out.println(numbers.indexOf("150"));
+    System.out.println();
+
+    SuperArray q = new SuperArray();
+    q.add("1");   q.add("2");   q.add("3");   q.add("4");
+    SuperArray w = new SuperArray();
+    w.add("1");
+    System.out.println(q.equals(w));
+    System.out.println(w.equals(q));
+
+    SuperArray e = new SuperArray();
+    e.add("1");   e.add("2");   e.add("3");   e.add("4");
+    SuperArray r = new SuperArray();
+    r.add("1");   r.add("2");   r.add("3");   r.add("4");
+    System.out.println(e.equals(r));
+    System.out.println(r.equals(e));
+
+    SuperArray t = new SuperArray(100);
+    SuperArray y = new SuperArray(1);
+    System.out.println(t.equals(y));
+
+    SuperArray u = new SuperArray(100);
+    u.add("8");   u.add("1");
+    SuperArray i = new SuperArray(1);
+    i.add("8");   i.add("1");
+    System.out.println(u.equals(i));
 
   }
 }

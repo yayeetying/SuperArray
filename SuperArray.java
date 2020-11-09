@@ -127,4 +127,16 @@ public class SuperArray {
     return newArray;
   }
 
+  public boolean equals(SuperArray other) {
+    if (this.size() != other.size()) {
+      return false;
+    }
+    for (int i = 0; i < size; i++) {
+      if (other.get(i).equals(this.get(i)) == false) {
+        return false;
+      }
+    }
+    return true;
+  }
+
 }
