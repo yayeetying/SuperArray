@@ -48,6 +48,9 @@ public class SuperArray {
   }
 
   public String get(int index) { //assume index is 0 to size-1
+    if (index < 0 || index >= size()) {
+      throw new IndexOutOfBoundsException("index is out of bounds; either too negative");
+    }
     return data[index];
   }
 
@@ -135,7 +138,7 @@ public class SuperArray {
       return false;
     }
     for (int i = 0; i < size; i++) {
-      if (other.get(i).equals(this.get(i)) == false) {
+      if (!other.get(i).equals(this.get(i))) {
         return false;
       }
     }
