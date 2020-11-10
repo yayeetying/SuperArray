@@ -10,12 +10,10 @@ public class Demo {
   }
 
   public static SuperArray findOverlap(SuperArray a, SuperArray b) {
-    removeDuplicates(a);
-    removeDuplicates(b);
     SuperArray bothHave = new SuperArray();
     for (int i = 0; i < a.size(); i++) {
-      if (b.contains(a.get(i))) bothHave.add(a.get(i));
-    }
+      if (b.contains(a.get(i)) && !bothHave.contains(a.get(i))) bothHave.add(a.get(i));
+    } //if both b & a have that element, && bothHave doesn't already have that element
     return bothHave;
   }
 
