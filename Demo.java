@@ -19,19 +19,18 @@ public class Demo {
 
   public static SuperArray zip(SuperArray a, SuperArray b) {
     SuperArray zipped = new SuperArray();
-    int smaller = b.size(); //a is bigger; b is smaller
-    int bigger = a.size();
+    SuperArray smaller = b; //a is bigger; b is smaller
+    SuperArray bigger = a;
     if (b.size() > a.size()) { //b is bigger, a is smaller
-      smaller = a.size();
-      bigger = b.size();
+      smaller = a;
+      bigger = b;
     }
-    for (int i = 0; i < smaller; i++) {
+    for (int i = 0; i < smaller.size(); i++) {
       zipped.add(a.get(i));
       zipped.add(b.get(i));
     }
-    for (int i = smaller; i < bigger; i++) {
-      if (b.size() > a.size()) zipped.add(b.get(i));
-      else {zipped.add(a.get(i));}
+    for (int i = smaller.size(); i < bigger.size(); i++) {
+      zipped.add(bigger.get(i));
     }
     return zipped;
   }
