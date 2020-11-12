@@ -191,5 +191,27 @@ public class Tester {
       System.out.println("IndexOuttaBounds T_T");
     }
 
+    try {
+      fruits.add(-1, "yapple");
+    }
+    catch (IndexOutOfBoundsException error) {
+      System.out.println("IndexOuttaBounds no bueno bro");
+    }
+
+    try {
+      fruits.add(5, "yapple");
+    }
+    catch (IndexOutOfBoundsException error) {
+      System.out.println("IndexOuttaBounds no bueno bro");
+    }
+
+    try {
+      fruits.add(2, "yapple");
+    }
+    catch (IndexOutOfBoundsException error) {
+      System.out.println("IndexOuttaBounds no bueno bro");
+    }
+    System.out.println(fruits);
+
   }
 }

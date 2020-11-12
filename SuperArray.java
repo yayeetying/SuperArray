@@ -28,6 +28,9 @@ public class SuperArray {
   }
 
   public void add(int index, String element) {
+    if (index < 0 || index > size()) { //add can add to latest slot (size); thas why not >=
+      throw new IndexOutOfBoundsException("index out of bounds; either is negative or > size");
+    }
     if (size == data.length) resize();
     if (data[index] != null) { //spot at index is occupied
       for (int i = size; i > index; i--) {
