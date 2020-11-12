@@ -71,7 +71,7 @@ public class SuperArray {
   }
 
   private void resize() {
-    String[] newData = new String[data.length * 2]; //data.length is the capacity
+    String[] newData = new String[data.length * 2 + 1]; //data.length is the capacity
     for (int i = 0; i < data.length; i++) {
       newData[i] = data[i];
     }
