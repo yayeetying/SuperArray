@@ -77,8 +77,8 @@ public class Tester {
     System.out.println(numbers2.remove(102)); //neko
     System.out.println(numbers2.toString());
     System.out.println(numbers2.size()); //size should = 102
-    System.out.println(numbers2.remove(102));
-    System.out.println(numbers2.remove(115)); //size <= index <= capacity; returns null
+    // System.out.println(numbers2.remove(102));
+    // System.out.println(numbers2.remove(115)); //size <= index <= capacity; returns null
     System.out.println(numbers2.toString());
     System.out.println(numbers2.size()); //size should = 102
     System.out.println();
@@ -212,6 +212,27 @@ public class Tester {
       System.out.println("IndexOuttaBounds no bueno bro");
     }
     System.out.println(fruits);
+
+    try {
+      System.out.println(fruits.remove(-1));
+    }
+    catch (IndexOutOfBoundsException error) {
+      System.out.println("IndexOuttaBounds weewoo weewoo!");
+    }
+
+    try {
+      System.out.println(fruits.remove(10));
+    }
+    catch (IndexOutOfBoundsException error) {
+      System.out.println("IndexOuttaBounds weewoo weewoo!");
+    }
+
+    try {
+      System.out.println(fruits.remove(3));
+    }
+    catch (IndexOutOfBoundsException error) {
+      System.out.println("IndexOuttaBounds weewoo weewoo!");
+    }
 
   }
 }
