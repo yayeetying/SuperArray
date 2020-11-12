@@ -157,5 +157,39 @@ public class Tester {
       System.out.println("IllegalArgumentException error!");
     }
 
+    try {
+      System.out.println(fruits.get(-10));
+    }
+    catch (IndexOutOfBoundsException error) {
+      System.out.println("IndexOuttaBounds dumbo! :DD");
+    }
+    try {
+      System.out.println(fruits.get(2));
+    }
+    catch (IndexOutOfBoundsException error) {
+      System.out.println("IndexOuttaBounds dumbo! :DD");
+    }
+
+    try {
+      System.out.println(fruits.get(1));
+    }
+    catch (IndexOutOfBoundsException error) {
+      System.out.println("IndexOuttaBounds dumbo! :DD");
+    }
+
+    try {
+      System.out.println(fruits.set(2, "yummy")); //can only set to existing elements; should fail
+    }
+    catch (IndexOutOfBoundsException error) {
+      System.out.println("IndexOuttaBounds T_T");
+    }
+
+    try {
+      System.out.println(fruits.set(-1, "fubby"));
+    }
+    catch (IndexOutOfBoundsException error) {
+      System.out.println("IndexOuttaBounds T_T");
+    }
+
   }
 }

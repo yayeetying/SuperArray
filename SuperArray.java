@@ -49,13 +49,16 @@ public class SuperArray {
 
   public String get(int index) { //assume index is 0 to size-1
     if (index < 0 || index >= size()) {
-      throw new IndexOutOfBoundsException("index is out of bounds; either too negative");
+      throw new IndexOutOfBoundsException("index out of bounds; either is negative or >= size");
     }
     return data[index];
   }
 
   //not add new values, only to replace old ones
   public String set(int index, String element) { //assume index is 0 to size-1
+    if (index < 0 || index >= size()) {
+      throw new IndexOutOfBoundsException("index out of bounds; either is negative or >= size");
+    }
     String replaced = data[index];
     data[index] = element;
     return replaced;
